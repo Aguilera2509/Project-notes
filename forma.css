@@ -1,0 +1,156 @@
+body
+{
+    background-color:lightsalmon;
+}
+
+h1
+{
+    margin-top: 60px;
+    color:azure;
+    border: brown 4px solid;
+    width: 910px;
+    height: 42px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+}
+
+.info
+{
+    width: 65.5%;
+    height: 520px;
+    background-color:rgba(255, 255, 255, 0.705);
+    margin-left: auto;
+    margin-right: auto;
+    border:black 10px solid;
+}
+
+#amarillo
+{
+    background-color:yellow;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#rojo
+{
+    background-color:red;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}   
+
+#azul
+{
+    background-color:blue;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+#verde
+{
+    background-color:green;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#negro
+{
+    background-color:black;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+#morado
+{
+    background-color:purple;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color:white;
+}
+
+#gris
+{
+    background-color:gray;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#blanco
+{
+    background-color:white;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#naranja
+{
+    background-color:orangered;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.funcion
+{
+    background-color:rgb(75, 255, 210);
+    border: dodgerblue 4px solid;
+    cursor: pointer;
+    font-family: cursive;
+    position: absolute; right: 75%; margin-top: 70px;
+    width: 100px;
+    height: 40px;
+}
+
+.funcion2
+{
+    background-color:rgb(75, 255, 210);
+    border: dodgerblue 4px solid;
+    cursor: pointer;
+    font-family: cursive;
+    position: absolute; right: 17%; margin-top: 70px;
+    width: 100px;
+    height: 40px;
+}
+
+.funcion3
+{
+    background-color:rgb(75, 255, 165);
+    border:brown 4px solid;
+    cursor: pointer;
+    font-family: cursive;
+    position: absolute; right: 47%; margin-top: 0px;
+    width: 100px;
+    height: 40px;
+}
