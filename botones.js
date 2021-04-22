@@ -3,8 +3,28 @@ let saludo = function()
 {
     nombre = prompt("Introduce tu nombre");
 
-    alert("Hola, bienvenido, me da mucho gusto tenerte aquí conmigo, " 
-    + nombre + " . Espero disfrutes dejando una nota, si quedan vacias claro esta, no sobreescribas la de otros. :D");
+    if(nombre == "")
+    {
+        alert("Para que presionas sino vas introducir tu nombre para el saludo?");
+
+        return nombre;
+    }
+
+    else if(nombre == null)
+    {
+        alert("Tienes que introducir tu nombre");
+
+        return nombre;
+
+    }
+    
+    else
+    {
+        alert("Hola, bienvenido, me da mucho gusto tenerte aquí conmigo, " 
+        + nombre + " . Espero disfrutes dejando una nota, si quedan vacias claro esta, no sobreescribas la de otros. :D");
+
+        return nombre;
+    }
 }
 
 //Función de Despedida

@@ -9,7 +9,7 @@ h1
     color:azure;
     border: brown 4px solid;
     width: 76%;
-    height: 80%;
+    height: 40%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +20,7 @@ h1
 
 .info
 {
-    width: 63%;
+    width: 62%;
     height: 70%;
     background-color:rgba(255, 255, 255, 0.705);
     margin-left: auto;
@@ -122,36 +122,43 @@ h1
     margin-bottom: 20px;
 }
 
+.info2
+{
+    margin-top: 40px;
+    width: 23.6%;
+    height: 20%;
+    background-color:lightsalmon;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.funcion
+#funcion
 {
     background-color:rgb(75, 255, 210);
     border: dodgerblue 4px solid;
     cursor: pointer;
     font-family: cursive;
-    position: absolute; right: 74.5%; margin-top: 70px;
     width: 100px;
     height: 40px;
+    margin-right: 31.6%;
 }
 
-.funcion2
+#funcion2
 {
     background-color:rgb(75, 255, 210);
     border: dodgerblue 4px solid;
     cursor: pointer;
     font-family: cursive;
-    position: absolute; right: 17.5%; margin-top: 70px;
     width: 100px;
     height: 40px;
 }
 
-.funcion3
+#funcion3
 {
-    background-color:rgb(75, 255, 165);
-    border:brown 4px solid;
+    background-color:rgb(36, 243, 116);
+    border: rgb(252, 230, 37) 4px solid;
     cursor: pointer;
     font-family: cursive;
-    position: absolute; right: 47%; margin-top: 40px;
     width: 100px;
     height: 40px;
 }
