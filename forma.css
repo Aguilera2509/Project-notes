@@ -20,7 +20,7 @@ h1
 
 .info
 {
-    width: 62%;
+    width: 63.5%;
     height: 70%;
     background-color:rgba(255, 255, 255, 0.705);
     margin-left: auto;
@@ -161,4 +161,102 @@ h1
     font-family: cursive;
     width: 100px;
     height: 40px;
+}
+
+@media screen and (max-width: 453px){
+
+#amarillo
+{
+    background-color:yellow;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+#rojo
+{
+    background-color:red;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+}   
+
+#azul
+{
+    background-color:blue;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    color: white;
+}
+
+#verde
+{
+    background-color:green;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+#negro
+{
+    background-color:black;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    color: white;
+}
+
+#morado
+{
+    background-color:purple;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    color:white;
+}
+
+#gris
+{
+    background-color:gray;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#blanco
+{
+    background-color:white;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+#naranja
+{
+    background-color:orangered;
+    overflow-y: scroll;
+    resize: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+    
 }
