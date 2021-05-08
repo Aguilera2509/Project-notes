@@ -37,5 +37,12 @@ let despedida = function()
 
 let datos = function()
 {
-    alert("Esta opción todavía no esta configurada, y no lo estará hasta que aprenda JavaScrpit, así que como esta la familia?")
+    var amarillo = document.getElementById('amarillo').value;
+    // Repetir con todos los demas wacho
+
+    db.collection('notas').add({
+        amarillo,
+    });
+
+    alert('Se guardaron tus notas wacho.');
 }
