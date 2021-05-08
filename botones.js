@@ -32,3 +32,10 @@ let despedida = function()
 {
     alert("Fue un gusto que visitarás mi primera página, espero que tengas un buen día. :D");
 }
+
+//Función de Envio de Datos
+
+let datos = function()
+{
+    alert("Esta opción todavía no esta configurada, y no lo estará hasta que aprenda JavaScrpit, así que como esta la familia?")
+}
