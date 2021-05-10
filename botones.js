@@ -44,5 +44,11 @@ let datos = function()
         amarillo,
     });
 
+    var rojo = document.getElementById('rojo').value;
+
+    db.collection('notas').add({
+        rojo,
+    });
+
     alert('Se guardaron tus notas wacho.');
 }
