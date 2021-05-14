@@ -1,13 +1,14 @@
-body
+#cuerpo
 {
-    background-color:lightsalmon;
+    background-color:darksalmon;
+    overflow-x: hidden;
 }
 
 h1
 {
     margin-top: 60px;
-    color:azure;
     border: brown 4px solid;
+    color:white;
     width: 76%;
     height: 40%;
     text-align: center;
@@ -18,245 +19,46 @@ h1
     font-style:italic;
 }
 
-.info
+.tamanio
 {
-    width: 63%;
-    height: 70%;
+    overflow: hidden;
+    resize: none;
+}
+
+.notas
+{
+    margin-top: 90px;
     background-color:rgba(255, 255, 255, 0.705);
-    margin-left: auto;
-    margin-right: auto;
-    border:black 10px solid;
 }
 
-#amarillo
-{
-    background-color:yellow;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-#rojo
-{
-    background-color:red;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-}   
-
-#azul
-{
-    background-color:blue;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color: white;
-}
-
-#verde
-{
-    background-color:green;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-#negro
-{
-    background-color:black;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color: white;
-}
-
-#morado
-{
-    background-color:purple;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color:white;
-}
-
-#gris
-{
-    background-color:gray;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#blanco
-{
-    background-color:white;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-#naranja
-{
-    background-color:orangered;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.info2
+.botones
 {
     margin-top: 40px;
-    width: 23.6%;
+    width: 100%;
     height: 20%;
-    background-color:lightsalmon;
     margin-left: auto;
     margin-right: auto;
 }
 
-#funcion
+.angulo
 {
-    background-color:rgb(75, 255, 210);
-    border: dodgerblue 4px solid;
-    cursor: pointer;
-    font-family: cursive;
-    width: 100px;
-    height: 40px;
-    margin-right: 31.6%;
+    position: relative;
+    left: 30%;
 }
 
-#funcion2
+.angulo2
 {
-    background-color:rgb(75, 255, 210);
-    border: dodgerblue 4px solid;
-    cursor: pointer;
-    font-family: cursive;
-    width: 100px;
-    height: 40px;
+    position: relative;
+    left: 40%;
 }
 
-#funcion3
+.angulo3
 {
-    background-color:rgb(36, 243, 116);
-    border: rgb(252, 230, 37) 4px solid;
-    cursor: pointer;
-    font-family: cursive;
-    width: 100px;
-    height: 40px;
+    position: relative;
+    left: 50%;
 }
 
-@media screen and (max-width: 453px){
-
-#amarillo
+textarea 
 {
-    background-color:yellow;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-}
-
-#rojo
-{
-    background-color:red;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-}   
-
-#azul
-{
-    background-color:blue;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-    color: white;
-}
-
-#verde
-{
-    background-color:green;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-}
-
-#negro
-{
-    background-color:black;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-    color: white;
-}
-
-#morado
-{
-    background-color:purple;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-    color:white;
-}
-
-#gris
-{
-    background-color:gray;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#blanco
-{
-    background-color:white;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 20px;
-}
-
-#naranja
-{
-    background-color:orangered;
-    overflow-y: scroll;
-    resize: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 20px;
-}
-    
+    width: 100%;
 }

@@ -5,23 +5,22 @@ let saludo = function()
 
     if(nombre == "")
     {
-        alert("Para que presionas sino vas introducir tu nombre para el saludo?");
+        alert("Yo tenia ganas de saludarte. :c");
 
         return nombre;
     }
 
     else if(nombre == null)
     {
-        alert("Tienes que introducir tu nombre");
+        alert("Por que no introduciste tu nombre? :c");
 
         return nombre;
-
     }
     
     else
     {
         alert("Hola, bienvenido, me da mucho gusto tenerte aquí conmigo, " 
-        + nombre + " . Espero disfrutes dejando una nota, si quedan vacias claro esta, no sobreescribas la de otros. :D");
+        + nombre + ". Espero disfrutes dejando una nota en cual color prefieras, eres libre de poner cualquier cosa. :D");
 
         return nombre;
     }
@@ -50,5 +49,5 @@ let datos = function()
         rojo,
     });
 
-    alert('Se guardaron tus notas wacho.');
+    alert("Su nota ha sido guardada con exito");
 }
