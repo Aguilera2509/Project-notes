@@ -39,58 +39,16 @@ let datos = function()
 
 //GUARDADO DE LA NOTA AMARILLA...
     var amarillo = document.getElementById('amarillo').value;
-
-    db.collection('notas').add({
-        amarillo
-    });
-
-//GUARDADO DE LA NOTA ROJA...
     var rojo = document.getElementById('rojo').value;
-
-    db.collection('notas').add({
-        rojo
-    });
-
-//GUARDADO DE LA NOTA AZUL...
     var azul = document.getElementById('azul').value;
-
-    db.collection('notas').add({
-        azul
-    });
-
-//GUARDADO DE LA NOTA VERDE...
     var verde = document.getElementById('verde').value;
-
-    db.collection('notas').add({
-        verde
-    });
-
-//GUARDADO DE LA NOTA NEGRA...
     var negro = document.getElementById('negro').value;
-
-    db.collection('notas').add({
-        negro
-    });
-
-//GUARDADO DE LA NOTA AZUL_OSCURO...
     var azul_oscuro = document.getElementById('azul_oscuro').value;
-
-    db.collection('notas').add({
-        azul_oscuro
-    });
-
-//GUARDADO DE LA NOTA GRIS..
     var gris = document.getElementById('gris').value;
-
-    db.collection('notas').add({
-        gris
-    });
-
- //GUARDADO DE LA NOTA BLANCA...
     var blanco = document.getElementById('blanco').value;
 
     db.collection('notas').add({
-        blanco
+        amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco
     });
 
     alert("Su nota ha sido guardada con exito");
