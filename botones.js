@@ -1,26 +1,38 @@
-//Funcioón de Saludo
+//Función de Saludo
 let saludo = function()
 {
     nombre = prompt("Introduce tu nombre");
 
-    if(nombre == "")
+    if(nombre === "" || nombre === " " || nombre === "  " || nombre === "   ")
     {
-        alert("Por que no introduciste tu nombre? :c");
+        
+        swal({
+            icon:'warning',
+            title:'Oops...',
+            text:'No introdujo nombre, ¿Por que?'
+        });
 
         return nombre;
     }
 
-    else if(nombre == null)
+    else if(nombre === null)
     {
-        alert("Yo tenia ganas de saludarte. :c");
+        swal({
+            icon:'info',
+            title:'Esta bien',
+            text:'Si no quieres saludo, no hay problema :,c'
+        });
 
         return nombre;
     }
     
     else
     {
-        alert("Hola, bienvenido, me da mucho gusto tenerte aquí conmigo, " 
-        + nombre + ". Espero disfrutes dejando una nota en cual color prefieras, eres libre de poner cualquier cosa. :D");
+        swal({
+            icon: 'success',
+            title: 'Bienvenido',
+            text: `Hola ${nombre}, me da mucho gusto tenerte aquí conmigo. Espero disfrutes dejando notas, eres libre de poner lo que quieras : D`
+        });
 
         return nombre;
     }
@@ -29,15 +41,18 @@ let saludo = function()
 //Función de Despedida
 let despedida = function()
 {
-    alert("Fue un gusto que visitarás mi primera página, espero que tengas un buen día. :D");
+    swal({
+        icon: 'success',
+        title: 'Despedida',
+        text: 'Me gusto mucho que pasarás por aquí, espero tengas un buen día, y gracias : D'
+    });
 }
 
 //Función de Envio de Datos
-
 let datos = function()
 {
 
-//GUARDADO DE LA NOTA AMARILLA...
+//GUARDADO DE TODAS LAS NOTAS....
     var amarillo = document.getElementById('amarillo').value;
     var rojo = document.getElementById('rojo').value;
     var azul = document.getElementById('azul').value;
@@ -51,5 +66,9 @@ let datos = function()
         amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco
     });
 
-    alert("Su nota ha sido guardada con exito");
+    swal({
+        icon: 'success',
+        title: 'Envio de Datos',
+        text: 'Tus notas se han guardado correctamente'
+    });
 }

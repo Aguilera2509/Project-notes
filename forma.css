@@ -6,17 +6,17 @@
 
 #titulo
 {
-    margin-top: 40px;
     border: brown 4px solid;
     color:white;
-    width: 76%;
+    font-style:italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     height: 40%;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
     margin-bottom: 60px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-style:italic;
+    text-align: center;
+    width: 76%;
 }
 
 .tamanio
@@ -27,17 +27,17 @@
 
 .notas
 {
-    margin-top: 90px;
     background-color:rgba(255, 255, 255, 0.705);
+    margin-top: 90px;
 }
 
 .botones
 {
-    margin-top: 40px;
-    width: 100%;
     height: 20%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
+    width: 100%;
 }
 
 .angulo
