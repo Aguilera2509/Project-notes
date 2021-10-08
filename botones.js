@@ -1,41 +1,34 @@
 //Función de Saludo
 let saludo = function()
 {
-    nombre = prompt("Introduce tu nombre");
-
-    if(nombre === "" || nombre === " " || nombre === "  " || nombre === "   ")
-    {
-        
-        swal({
-            icon:'warning',
-            title:'Oops...',
-            text:'No introdujo nombre, ¿Por que?'
-        });
-
-        return nombre;
-    }
-
-    else if(nombre === null)
-    {
-        swal({
-            icon:'info',
-            title:'Esta bien',
-            text:'Si no quieres saludo, no hay problema :,c'
-        });
-
-        return nombre;
-    }
+    swal({
+        text: 'Ingresa tu nombre',
+        content: "input",
+        button: {
+            text: "¡Confirmar!"
+        } 
+    }).then(name =>{
+        //console.log(name)
+        if(/^ *$/.test(name)){
+            swal({
+                icon:'warning',
+                title:'Oops...',
+                text:'No introdujo nombre, ¿Por que?'
+            });
     
-    else
-    {
-        swal({
-            icon: 'success',
-            title: 'Bienvenido',
-            text: `Hola ${nombre}, me da mucho gusto tenerte aquí conmigo. Espero disfrutes dejando notas, eres libre de poner lo que quieras : D`
-        });
-
-        return nombre;
-    }
+            return name;
+        }
+        
+        else{
+            swal({
+                icon: 'success',
+                title: 'Bienvenido',
+                text: `Hola ${name}, me da mucho gusto tenerte aquí conmigo. Espero disfrutes dejando notas, eres libre de poner lo que quieras : D`
+            });
+    
+            return name;
+        }
+    })
 }
 
 //Función de Despedida
@@ -49,8 +42,11 @@ let despedida = function()
 }
 
 //Función de Envio de Datos
-let datos = function()
+let datos = async function()
 {
+    const $svg = document.querySelector("#svg");
+
+    $svg.classList.remove("none");
 
 //GUARDADO DE TODAS LAS NOTAS....
     var amarillo = document.getElementById('amarillo').value;
@@ -62,9 +58,15 @@ let datos = function()
     var gris = document.getElementById('gris').value;
     var blanco = document.getElementById('blanco').value;
 
+    const response = await axios.get('https://api.ipify.org?format=json');
+    //console.log(response);
+    const IP = response.data.ip;
+
     db.collection('notas').add({
-        amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco
+        amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco, IP
     });
+
+    $svg.classList.add("none");
 
     swal({
         icon: 'success',
@@ -72,3 +74,31 @@ let datos = function()
         text: 'Tus notas se han guardado correctamente'
     });
 }
+
+document.addEventListener("DOMContentLoaded", async (e)=>{
+
+    const $template = document.getElementById("contenido").content,
+        $fragment = document.createDocumentFragment(),
+        $ver_contenido = document.querySelector(".ver-contenido");
+
+    const collection = await db.collection("notas").get();
+
+    collection.forEach(doc => {
+        //console.log(doc.data())
+        
+        $template.getElementById("amarillo").textContent = doc.data().amarillo;
+        $template.getElementById("rojo").textContent = doc.data().rojo;
+        $template.getElementById("azul").textContent = doc.data().azul;
+        $template.getElementById("verde").textContent = doc.data().verde;
+        $template.getElementById("negro").textContent = doc.data().negro;
+        $template.getElementById("azul_oscuro").textContent = doc.data().azul_oscuro;
+        $template.getElementById("gris").textContent = doc.data().gris;
+        $template.getElementById("blanco").textContent = doc.data().blanco;
+
+        let $clone = $template.cloneNode(true);
+
+        $fragment.appendChild($clone);
+    });
+
+    $ver_contenido.append($fragment);
+})

@@ -4,19 +4,12 @@
     overflow-x: hidden;
 }
 
-#titulo
-{
-    border: brown 4px solid;
-    color:white;
-    font-style:italic;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    height: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 60px;
+.center{
     text-align: center;
-    width: 76%;
+    color: white;
+    padding: 1rem;
+    font-family: cursive;
+    background-color:rgb(53, 185, 152);
 }
 
 .tamanio
@@ -29,58 +22,20 @@
 {
     background-color:rgba(255, 255, 255, 0.705);
     margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .botones
 {
-    height: 20%;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 40px;
-    width: 100%;
 }
 
-.angulo
-{
-    position: relative;
-    left: 30%;
-}
-
-.angulo2
-{
-    position: relative;
-    left: 40%;
-}
-
-.angulo3
-{
-    position: relative;
-    left: 50%;
+.none{
+    display: none;
 }
 
 textarea 
 {
     width: 100%;
-}
-
-@media screen and (max-width: 769px)
-{
-    .angulo
-    {
-        position: relative;
-        left: 12%;
-    }
-
-    .angulo2
-    {
-        position: relative;
-        left: 18%;
-    }
-
-    .angulo3
-    {
-        position: relative;
-        left: 24%;
-    }
-
 }
