@@ -1,9 +1,10 @@
 //Importando Acciones de los botones
 import { saludo,despedida,datos } from "./Componentes/botones.js";
 //Importando Carga de las Notas de la Firebase
-import { getValueNotes } from "./Componentes/getValueNotes.js"
+import { getValueNotes } from "./Componentes/getValueNotes.js";
+//Importando Una Subida Rápida
+import { up } from "./Componentes/scroll-top.js";
 
-//MODULO PRINCIPAL!!!!
 
 document.addEventListener("click", (e) =>{
     if(e.target.matches('#hello')) saludo();
@@ -12,3 +13,7 @@ document.addEventListener("click", (e) =>{
 });
 
 document.addEventListener("DOMContentLoaded", getValueNotes);
+
+window.addEventListener("scroll", (e)=>{
+    up();
+});

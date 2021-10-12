@@ -8,7 +8,7 @@
     
     <!--Title, mi style y favicon-->
     <title>Notas En Pantalla</title>
-    <link rel="stylesheet" href="forma.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/Imagen de Pestania.png">
 
     <!--Permisos de API Firebase-->
@@ -25,7 +25,7 @@
 </head>
 <body id="cuerpo">
 
-    <h1 class="container-lg center"> 
+    <h1 class="container-lg center" id="id-scroll"> 
         Bienvenido, eres libre de escribir lo que quieras en varias notas. Todo es anónimo
     </h1>
     
@@ -64,7 +64,13 @@
         <button type="button" id="submit" class="btn btn-dark position-absolute top-50 start-50 translate-middle">Enviar</button>
         <button type="button" id="bye" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y">Despedirse</button>
     </div>
-    
+
+    <div>
+        <a href="#id-scroll">
+            <button class="scroll-btn-top none" id="hidden">↑</button>
+        </a>
+    </div>
+
     <!--TIENE LA CLASE "botones" pero NO es un boton-->
     <div class="position-relative botones none" id="svg">
         <img src="assets/tail-spin.svg" alt="Loading..." class="position-absolute top-50 start-50 translate-middle">

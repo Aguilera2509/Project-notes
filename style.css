@@ -36,3 +36,23 @@
 .none{
     display: none;
 }
+
+.scroll-btn-top{
+    background-color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    font-size: 35px;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.scroll-btn-top:hover{
+    background-color: black;
+    color: yellow;
+}

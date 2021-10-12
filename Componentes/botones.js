@@ -61,37 +61,46 @@ export async function datos(){
     var gris = document.getElementById('gris').value;
     var blanco = document.getElementById('blanco').value;
     
-    //Trayendo la IP del Router del usuario
-    const response = await axios.get('https://api.ipify.org?format=json');
-    //console.log(response);
-    const IP = response.data.ip;
-
-    //Trayendo la UBICACION del usuario por la IP
-    const zone = await fetch(`http://api.ipstack.com/${IP}?access_key=e5f02b9c7e2fbebd1ed75e8f7fc68002`),
-        json = await zone.json();
-
-    //Destructurando el elemento con las propiedades de su ZONA
-    let { country_name, region_name, latitude, longitude } = json;
-
+    /*Try-Catch para capturar el error de las Async-await.
+    Solo Mostrará un error simple y sencillo realizado por mi, nada en especial o especifico.
+    Solo para hacerle saber al usuario que algo salio mal y ya.*/
+    try {
+        //Trayendo la IP del Router del usuario
+        const response = await axios.get('https://api.ipify.org?format=json'),
+            IPv4 = response.data.ip;
+        //console.log(response);
     
-    //Enviando datos de las notas y la IP a Firebare
-    API.db.collection('notas').add({
-        amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco, 
-        IP, country_name, region_name, latitude, longitude
-    });
+        //Trayendo la UBICACION del usuario por la IP
+        const zone = await fetch(`http://api.ipstack.com/${IPv4}?access_key=e5f02b9c7e2fbebd1ed75e8f7fc68002`),
+            json = await zone.json();
+        //console.log(json);
+
+        //Destructurando el elemento con las propiedades de su ZONA
+        let { country_name, region_name, latitude, longitude } = json;
+            
+        //Enviando datos de las notas y la IP a Firebare
+        API.db.collection('notas').add({
+            amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco, 
+            IPv4, country_name, region_name, latitude, longitude
+        });
+
+    } catch (err) {
+        swal({
+            icon:'error',
+            title:'ERROR',
+            text:'Ha ocurrido un error al enviar datos, favor de volver a intentar'
+        })
+    };
     
     //Loader... Ocultar
     $svg.classList.add("none");
     
     //Mensaje de envio con exito
-    swal({
+    await swal({
         icon: 'success',
         title: 'Envio de Datos',
-        text: 'Tus notas se han guardado correctamente. Se recargará en 10 segundos la página y podrás visualizar tus notas entre las demas'
+        text: 'Tus notas se han guardado correctamente. Se recargará la página y podrás visualizar tus notas entre las demas'
     });
 
-    setTimeout(()=>{
-        window.location.reload();
-    },12000);
-
+    window.location.reload();
 };
