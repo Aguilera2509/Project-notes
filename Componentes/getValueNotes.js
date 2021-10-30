@@ -8,7 +8,7 @@ export async function getValueNotes(){
         $svg_getNotes = document.getElementById("svg-getnotes");
 
     $svg_getNotes.classList.remove("none");
-    
+
     try {
         const collection = await API.db.collection("notas").get();
         
@@ -23,7 +23,7 @@ export async function getValueNotes(){
             $template.getElementById("azul_oscuro").textContent = doc.data().azul_oscuro;
             $template.getElementById("gris").textContent = doc.data().gris;
             $template.getElementById("blanco").textContent = doc.data().blanco;
-            
+
             let $clone = $template.cloneNode(true);
         
             $fragment.appendChild($clone);
@@ -39,5 +39,6 @@ export async function getValueNotes(){
     //Loader de cargando contenido de las notas
     $svg_getNotes.classList.add("none");
 
+    //Agregando las notas al DOM para que todos las vean
     $ver_contenido.append($fragment);
 };
