@@ -1,4 +1,5 @@
 import API from "./database.js"
+import { getValueNotes } from "./getValueNotes.js";
 
 //Exportando Función de Saludo
 export function saludo(){
@@ -65,15 +66,18 @@ export async function datos(){
     Solo Mostrará un error simple y sencillo realizado por mi, nada en especial o especifico.
     Solo para hacerle saber al usuario que algo salio mal y ya.*/
     try {
-        //Trayendo la IP del Router del usuario
-        const response = await axios.get('https://api.ipify.org?format=json'),
-            IPv4 = response.data.ip;
-        //console.log(response);
-            
+        //No localiza precisamente al usuario pero si da un GRAN área de dónde puede estar
+        //Existen APIs más precisas pero se pagan para usar sus buenos protocolos o precision
+        const place = await fetch(`https://api.ipdata.co/?api-key=4cd6b4d7cdd3b2225e02814e2399febbf7476b78be4bba5853d0952a`),
+            json = await place.json();
+
+        let { calling_code, country_name, country_code, latitude, longitude, ip } =  json;
+        //console.log(json);
+        
         //Enviando datos de las notas y la IP a Firebare
         API.db.collection('notas').add({
-            amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco, 
-            IPv4
+            amarillo, rojo, azul, verde, negro, azul_oscuro, gris, blanco,
+            calling_code, country_name, country_code, latitude, longitude, ip
         });
 
     } catch (err) {
@@ -91,7 +95,7 @@ export async function datos(){
     await swal({
         icon: 'success',
         title: 'Envio de Datos',
-        text: 'Tus notas se han guardado correctamente. Se recargará la página y podrás visualizar tus notas entre las demas'
+        text: 'Tus notas se han guardado correctamente. Se recarga la página busca tus notas entre las demas'
     });
 
     window.location.reload();

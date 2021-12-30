@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    
     <!--Title, mi style y favicon-->
     <title>Notas En Pantalla</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/Imagen de Pestania.png">
-
     <!--Permisos de API Firebase-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <!--Este SCRIPT me permite obtener la IP del USUARIO-->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!--SweetAlert Me permite mostrar unas alertas decentes(Bonitas)-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--LIbreria de Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
 </head>
 <body id="cuerpo">
-
-    <h1 class="container-lg center" id="id-scroll"> 
-        Bienvenido, eres libre de escribir lo que quieras en varias notas. Todo es anónimo
+    <h1 class="container-lg center" id="up-scroll"> 
+        <span class="typed"></span>
     </h1>
     
         <main class="border border-dark border border-5 container-fuid notas">
@@ -59,20 +52,20 @@
         </main>
     
     <!--BOTONES QUE EJECUTAN LAS ACCIONES-->
-    <div class=".container-lg botones position-relative">
+    <div class=".container-lg margin-top position-relative">
         <button type="button" id="hello" class="btn btn-primary">Saludar</button>
         <button type="button" id="submit" class="btn btn-dark position-absolute top-50 start-50 translate-middle">Enviar</button>
         <button type="button" id="bye" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y">Despedirse</button>
     </div>
 
+    <!--Scroll UP-->
     <div>
-        <a href="#id-scroll">
+        <a href="#up-scroll">
             <button class="scroll-btn-top none" id="hidden">↑</button>
         </a>
     </div>
 
-    <!--TIENE LA CLASE "botones" pero NO es un boton-->
-    <div class="position-relative botones none" id="svg">
+    <div class="position-relative margin-top none" id="svg">
         <img src="assets/tail-spin.svg" alt="Loading..." class="position-absolute top-50 start-50 translate-middle">
     </div>
 
@@ -107,12 +100,14 @@
         </div>
     </template>
 
-    <div class="position-relative botones none" id="svg-getnotes">
+    <div class="position-relative margin-top none" id="svg-getnotes">
         <img src="assets/tail-spin.svg" alt="Loading..." class="position-absolute top-50 start-50 translate-middle">
     </div>
 
     <div class="ver-contenido" style="height: auto; width: 100%; background-color:blanchedalmond"></div>
 
+    <!--Librería para la funcion del Effect-welcome.js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js" type="module"></script>
 </body>
 </html>

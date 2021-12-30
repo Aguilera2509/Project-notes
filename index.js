@@ -4,6 +4,8 @@ import { saludo,despedida,datos } from "./Componentes/botones.js";
 import { getValueNotes } from "./Componentes/getValueNotes.js";
 //Importando Una Subida Rápida
 import { up } from "./Componentes/scroll-top.js";
+//Importando un Efecto de Escritura
+import { welcome } from "./Componentes/effect-welcome.js";
 
 
 document.addEventListener("click", (e) =>{
@@ -12,7 +14,10 @@ document.addEventListener("click", (e) =>{
     if(e.target.matches('#submit')) datos();
 });
 
-document.addEventListener("DOMContentLoaded", getValueNotes);
+document.addEventListener("DOMContentLoaded", (e) => {
+    getValueNotes();
+    welcome();
+});
 
 window.addEventListener("scroll", (e)=>{
     up();
